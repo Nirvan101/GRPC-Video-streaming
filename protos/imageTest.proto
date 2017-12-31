@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option objc_class_prefix = "HLW";
+
+
+// The greeting service definition.
+service ImageTest {
+  // Sends a greeting
+  rpc Analyse (stream MsgRequest) returns (stream MsgReply) {}
+}
+
+// The request message containing the image.
+message MsgRequest {
+  bytes img = 1;
+}
+
+// The response message containing the reply
+message MsgReply {
+  int32 reply = 1;
+}

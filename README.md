@@ -1,5 +1,5 @@
 ## Introduction
-Using gRPC (Google remote procedural calls) for transferring video over the internet and receiving the results back. The video is sent from the server to the client. The client processes the received video, generates some results and passes these results back to the client. This code uses bi-directinal streaming. Video is streamed from server to client. Results are streamed back from client to server.
+Using gRPC (Google remote procedural calls) for transferring video over the internet and receiving the results back. The video is sent from the server to the client. The client processes the received video, generates some results and passes these results back to the server. This code uses bi-directinal streaming. Video is streamed from server to client. Results are streamed back from client to server.
 
 
 ## Use
@@ -39,7 +39,7 @@ First we make the .proto file and place it in the ```grpcTest/protos folder```. 
   
   We then write the files ```imageTest_server.py``` and ```imageTest_client.py``` which use the above 2 generated files.
   
-The client sends the video file via a stream of frames. The server receives these frames and continuously processes each frame and counts the number of people entering the mall. This count is sent back to the client using streaming. 
+The server sends the video file via a stream of frames. The client receives these frames and continuously processes each frame and counts the number of people entering the video. This count is sent back to the server using streaming. 
   
 Note: Use internet through LAN for fastest transfer.
 

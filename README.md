@@ -5,7 +5,7 @@ Using gRPC (Google remote procedural calls) for transferring video over the inte
 ## Use
 This is used to stream live footage from cctv cameras. Video from a CCTV camera is transferred in real-time to a distant proccessing facility. This is because computationally intensive hardware is not located near the camera. At the facility we can use some heavy computational procedure on it like deep learning and transfer the results back to the place at which the camera is located. 
 
-In this code, I've performed 'people counting' on the video. The video from the camera is transferred via gRPC. The client, running on another machine, receives this video via the internet. The client performs people counting on the video is real-time and continously transfers the results back i.e the number of people counted till now. 
+In this code, I've performed 'people counting' on the video. The video from the camera is transferred via gRPC. The client, running on another machine, receives this video via the internet. The client performs people counting on the video in real-time and continously transfers the results back i.e the number of people counted till now. 
 
 
 ## Main requirements:
@@ -29,7 +29,7 @@ Install skvideo:
 ```sudo pip install scikit-video```
 
 
-## usage
+## Running the code
 
 First we make the .proto file and place it in the ```grpcTest/protos folder```. We execute the following command from the folder grpcTest.
 
